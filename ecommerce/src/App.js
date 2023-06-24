@@ -1,7 +1,9 @@
 import "./App.css";
 import logo from "./logo.png";
-import Mockman from "mockman-js"
+import Mockman from "mockman-js";
 import {Route,Routes} from "react-router-dom";
+import {Home}  from "./pages/home/Home.jsx"
+
 
 function App() {
   return (
@@ -9,7 +11,8 @@ function App() {
       
     
       <Routes>
-        <Route path = "/" element={<h2>Hello , Welcome to my E-Commerce Website</h2>} />
+        {/* <Route path = "/" element={<h1>Hello All</h1>} /> */}
+        <Route path = "/" element={<Home/>} />
         <Route path = "/mockman" element={  <Mockman />} />
       </Routes>
 
