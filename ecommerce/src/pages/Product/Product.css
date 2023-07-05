@@ -1,0 +1,7 @@
+.Products-Under-Category>ul>div{
+    display: flex;
+    flex-direction: column;
+   list-style: none;
+   width: 300px;
+   display: inline-block;
+}

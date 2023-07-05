@@ -1,0 +1,10 @@
+
+
+
+.CategoryList-container>ul>li{
+    display: flex;
+    flex-direction: column;
+   list-style: none;
+   width: 300px;
+   display: inline-block;
+}
