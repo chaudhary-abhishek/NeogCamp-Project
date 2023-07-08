@@ -5,13 +5,17 @@ import App from "./App";
 import { makeServer } from "./server";
 import { BrowserRouter as Router } from "react-router-dom";
 
+import { CartContext, CartProvider } from "./context/CartProvider";
+
 // Call make Server
 makeServer();
-
+export {CartContext};
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-    <App />
+      <CartProvider>
+      <App />
+      </CartProvider>
     </Router>
    
   </React.StrictMode>,

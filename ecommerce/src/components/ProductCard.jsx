@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import "../pages/Product/Product.css";
+import { useContext } from "react";
+import { CartContext } from "..";
 export const ProductCard = (product) => {
   const { imageLink, title, price, categoryName, _id, noDetail, highlights } =
     product;
-  //   const {productId, productCategory} = useParams();
+  const { addToCart } = useContext(CartContext);
   return (
-    <div className="Products-Under-Category">
-      <ul>
+    <div  className="Products-Under-Category">
+      <ul key={_id}>
         <img src={imageLink} alt="no image found" />
         <h3>{title}</h3>
         <p>
@@ -24,7 +26,7 @@ export const ProductCard = (product) => {
               <p>{highlight}</p>
             ))}
           </ul>
-          <button>Add to Cart</button>
+          <button onClick={()=>addToCart(product)}>Add to Cart</button>
         </div>
       )}
     </div>
